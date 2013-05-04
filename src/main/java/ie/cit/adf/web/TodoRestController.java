@@ -28,8 +28,8 @@ public class TodoRestController {
 	// curl -X GET -i http://localhost:8080/todo-app/api/todo
 	@RequestMapping(value = "todo", method = RequestMethod.GET)
 	@ResponseStatus(HttpStatus.OK)
-	@ResponseBody
-	public Todos todos() {
+	
+	public @ResponseBody Todos todos() {
 		return new Todos(todoService.getAllTodos());
 	}
 
